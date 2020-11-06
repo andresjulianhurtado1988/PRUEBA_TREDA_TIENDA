@@ -13,7 +13,6 @@
                         <label for="nombre">Nombre de la Tienda</label>
                         <input type="text" id="textValidReg" name="nombre" class="form-control" onkeyup="mayus(this);"
                             pattern="[a-zA-Z ]{2,254}" required>
-                        <label dissabled id="validacion"></label>
                     </div>
                     <div class="form-group">
                         <label for="fecha">Fecha de Apertura</label>

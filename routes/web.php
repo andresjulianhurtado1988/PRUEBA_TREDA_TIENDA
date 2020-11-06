@@ -31,3 +31,10 @@ Route::get('/formProducto/{id}', [App\Http\Controllers\TiendaController::class, 
 Route::post('/registerProducto', [App\Http\Controllers\TiendaController::class, 'registerProducto'])->name('registerProducto');
 Route::get('/editProducto/{id}', [App\Http\Controllers\TiendaController::class, 'editProducto'])->name('editProducto');
 Route::post('/updateProducto', [App\Http\Controllers\TiendaController::class, 'updateProducto'])->name('updateProducto');
+
+
+// RUTAAS PRUEBA DE LÓGICA
+Route::get('/pruebaLogica', [App\Http\Controllers\logicaController::class, 'pruebaLogica'])->name('pruebaLogica');
+Route::post('/punto1', [App\Http\Controllers\logicaController::class, 'punto1'])->name('punto1');
+Route::post('/punto2', [App\Http\Controllers\logicaController::class, 'punto2'])->name('punto2');
+Route::post('/punto3', [App\Http\Controllers\logicaController::class, 'punto3'])->name('punto3');
