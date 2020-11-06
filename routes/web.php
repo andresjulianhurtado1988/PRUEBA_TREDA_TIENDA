@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Auth::routes();
+
+// RUTAS PRODUCTO 
+Route::get('/listProducto', [App\Http\Controllers\ProductoController::class, 'listProducto'])->name('listProducto');
+
+// RUTAS TIENDA
+Route::get('/listTienda', [App\Http\Controllers\TiendaController::class, 'listTienda'])->name('listTienda');
+Route::get('/formTienda', [App\Http\Controllers\TiendaController::class, 'formTienda'])->name('formTienda');
+Route::post('/registerTienda', [App\Http\Controllers\TiendaController::class, 'registerTienda'])->name('registerTienda');
+Route::get('/editTienda/{id}', [App\Http\Controllers\TiendaController::class, 'editTienda'])->name('editTienda');
+Route::post('/updateTienda/{id}', [App\Http\Controllers\TiendaController::class, 'updateTienda'])->name('updateTienda');
+Route::get('/listProductosTienda/{id}', [App\Http\Controllers\TiendaController::class, 'listProductosTienda'])->name('listProductosTienda');
+
+Route::get('/formProducto/{id}', [App\Http\Controllers\TiendaController::class, 'formProducto'])->name('formProducto');
+Route::post('/registerProducto', [App\Http\Controllers\TiendaController::class, 'registerProducto'])->name('registerProducto');
+Route::get('/editProducto/{id}', [App\Http\Controllers\TiendaController::class, 'editProducto'])->name('editProducto');
+Route::post('/updateProducto', [App\Http\Controllers\TiendaController::class, 'updateProducto'])->name('updateProducto');
