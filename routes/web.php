@@ -19,9 +19,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-// RUTAS PRODUCTO 
-Route::get('/listProducto', [App\Http\Controllers\ProductoController::class, 'listProducto'])->name('listProducto');
-
 // RUTAS TIENDA
 Route::get('/listTienda', [App\Http\Controllers\TiendaController::class, 'listTienda'])->name('listTienda');
 Route::get('/formTienda', [App\Http\Controllers\TiendaController::class, 'formTienda'])->name('formTienda');

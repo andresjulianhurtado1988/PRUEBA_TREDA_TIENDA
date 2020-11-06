@@ -78,6 +78,14 @@ class TiendaController extends Controller
     }
     public function registerProducto(Request $request)
     {
+        $request->validate([
+            'nombre' => 'required',
+            'fecha' => 'required',
+            'descripcion' => 'required',
+            'valor' => 'required',
+            'imagen' => 'required'
+        ]);
+
         $extencionArchivo = '';
         $rutaDeArchivo = null;
         $nombreArchivo = '';
@@ -148,7 +156,6 @@ class TiendaController extends Controller
         $produc->imagen =  $rutaDeArchivo;
 
         $produc->save();
-
 
         return redirect()->route('listProductosTienda', [$request->tienda_id]);
     }

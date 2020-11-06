@@ -6,7 +6,8 @@
             Nuevo Producto
         </legend>
 
-        <form class="col-md-5 ml-0 pl-0" role="form" method="POST" action="{{ route('registerProducto') }}" enctype="multipart/form-data">
+        <form class="col-md-5 ml-0 pl-0" role="form" method="POST" action="{{ route('registerProducto') }}"
+            enctype="multipart/form-data">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="form-group">
                 <label for="nombre">Nombre de Producto</label>
@@ -29,7 +30,7 @@
             </div>
             <div class="form-group">
                 <label for="imagen">Producto</label>
-                <input type="file" name="imagen" id="imagen" class="form-control">
+                <input type="file" name="imagen" id="imagen" class="form-control" required>
             </div>
             <input type="submit" value="registrar" class="btn btn-success">
         </form>
