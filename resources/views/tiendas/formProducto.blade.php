@@ -13,17 +13,18 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="nombre">Nombre de Producto</label>
-                        <input type="text" name="nombre" class="form-control" onkeyup="mayus(this);" required>
+                        <input type="text" name="nombre" class="form-control" onkeyup="mayus(this);"
+                            pattern="[a-zA-Z ]{2,254}" required>
                     </div>
                     <div class="form-group">
                         <label for="valor">Valor del Producto</label>
-                        <input type="text" name="valor" class="form-control" required>
+                        <input type="text" name="valor" class="form-control" pattern="^[0-9,$]*$" required>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="imagen">Producto</label>
-                        <input type="file" name="imagen" id="imagen" class="form-control" required>
+                        <input type="file" name="imagen" id="imagen" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="tienda">Tienda</label>
@@ -36,7 +37,7 @@
             </div>
             <div class="form-group">
                 <label for="descripcion">Descripción</label>
-                <textarea type="text" name="descripcion" class="form-control" required></textarea>
+                <textarea type="text" name="descripcion" class="form-control"></textarea>
             </div>
             <div class="row">
                 <div class="col-md-3">

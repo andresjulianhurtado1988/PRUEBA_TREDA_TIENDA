@@ -78,13 +78,6 @@ class TiendaController extends Controller
     }
     public function registerProducto(Request $request)
     {
-        $request->validate([
-            'nombre' => 'required',
-            'fecha' => 'required',
-            'descripcion' => 'required',
-            'valor' => 'required',
-            'imagen' => 'required'
-        ]);
 
         $extencionArchivo = '';
         $rutaDeArchivo = null;
